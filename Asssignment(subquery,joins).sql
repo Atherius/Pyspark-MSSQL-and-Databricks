@@ -39,7 +39,7 @@ SELECT p.Name,r.Comments
 FROM Production.Product p
 JOIN Production.ProductReview r ON p.ProductID = r.ProductID;
 
-SELECT * FROM ProductReviews1;
+SELECT * FROMÂ ProductReviews1;
 
 
 --Q4. find out the vendor for the product paint,Adjustable Race and blade
