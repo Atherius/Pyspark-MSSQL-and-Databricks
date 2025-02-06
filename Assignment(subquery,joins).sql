@@ -639,12 +639,12 @@ on e.BusinessEntityID=p.BusinessEntityID
 
 
 --Q51.	Find the average age of male and female
+--Q51.	Find the average age of male and female
 select e.Gender as Gender,
 Avg(year(getdate())-year(e.BirthDate))as Average_of_age
 from HumanResources.Employee e
-join Person.Person p
-on e.BusinessEntityID=p.BusinessEntityID
 group by e.Gender
+
 
 
 --Q52. Which product is the oldest product as on the date (refer  the product sell start date)
