@@ -516,6 +516,7 @@ order by EmployeeCount desc
 select JobTitle as Job_Title,count(BusinessEntityID)as EmployeeCount
 from HumanResources.Employee
 group by JobTitle
+order by EmployeeCount desc
 
 
 --Q39. Check if there is mass hiring of employees on single day
