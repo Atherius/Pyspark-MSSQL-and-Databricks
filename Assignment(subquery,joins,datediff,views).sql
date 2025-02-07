@@ -475,10 +475,11 @@ order by Avg_Cost
 
 
  --Q35. Find the state wise tax rate (hint: Sales.SalesTaxRate, Person.StateProvince) 
-select sp.Name as StateName, sp.StateProvinceCode, str.TaxRate
+select sp.Name as StateName,avg(str.TaxRate)as Tax
 from Sales.SalesTaxRate str
 join Person.StateProvince sp 
 on str.StateProvinceID = sp.StateProvinceID
+group by sp.Name
 order by sp.Name
 
 
