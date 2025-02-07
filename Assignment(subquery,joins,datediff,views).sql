@@ -448,7 +448,7 @@ where SellEndDate is not null
 and 
 SellEndDate < getdate() --if the sellend date is lesser than current datetime or in the past then
 or 
-SellStartDate is null
+SellStartDate is not null
 
 
 --Q32. find the class wise, style wise average standard cost 
