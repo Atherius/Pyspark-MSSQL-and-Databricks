@@ -513,7 +513,7 @@ order by EmployeeCount desc
 
 
 --Q38. Find the job title having more employees 
-select JobTitle as Job_Title,count(BusinessEntityID)as EmployeeCount
+select top 1 JobTitle as Job_Title,count(BusinessEntityID)as EmployeeCount
 from HumanResources.Employee
 group by JobTitle
 order by EmployeeCount desc
