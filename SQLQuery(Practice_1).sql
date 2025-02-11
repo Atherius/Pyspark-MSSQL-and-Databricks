@@ -320,7 +320,7 @@ from HumanResources.Employee e
 join HumanResources.EmployeeDepartmentHistory edh 
 on e.BusinessEntityID = edh.BusinessEntityID
 join HumanResources.Department d 
-on edh.DepartmentID = d.DepartmentID;
+on edh.DepartmentID =Â d.DepartmentID;
 
 -- check the person details with total count of various shifts working per department and count per department
 select*from Person.Person
