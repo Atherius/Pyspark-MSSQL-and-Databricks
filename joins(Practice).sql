@@ -109,11 +109,11 @@ order by topvalue desc
 
 
 
--- which currency consversion is with least values
+-- which currency consversion is withÂ leastÂ values
 select top 1 cr.FromCurrencyCode,cr.ToCurrencyCode,max(cr.EndOfDayRate) as leastvalue
 from Sales.CurrencyRate cr
 group by  cr.FromCurrencyCode,cr.ToCurrencyCode
-order by leastvalue asc
+order by leastvalueÂ asc
 
 --what special offer was having more duration
 select*from sales.SpecialOffer
