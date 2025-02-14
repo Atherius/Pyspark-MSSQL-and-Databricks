@@ -71,7 +71,7 @@ SELECT p.Name,r.Comments
 FROM Production.Product p
 JOIN Production.ProductReview r ON p.ProductID = r.ProductID;
 
-SELECT * FROM ProductReviews1;
+SELECT * FROMÂ ProductReviews1;
 
 --Q4. find out the vendor for the product paint,Adjustable Race and blade
 select*from Production.Product
@@ -354,7 +354,7 @@ on eph.businessentityid = e.businessentityid
 join person.person p 
 on e.businessentityid = p.businessentityid
 group by e.businessentityid, p.firstname, p.lastname
-having count(eph.ratechangedate) > 1;
+having count(eph.ratechangedate)Â >Â 1;
 
 
 --26.	 display the personal details of  employee whose payment is revised for more than once.
@@ -435,8 +435,8 @@ group by sod.salesorderid
 order by totalorderquantity desc
 
 --32.	 find the duration of payment revision on every interval  (inline view) Output must be as given format
---## revised time – count of revised salries
---## duration – last duration of revision e.g there are two revision date 01-01-2022 and revised in 01-01-2024   so duration here is 2years  
+--## revised time Â– count of revised salries
+--## duration Â– last duration of revision e.g there are two revision date 01-01-2022 and revised in 01-01-2024   so duration here is 2years  
 select * from HumanResources.Employee
 select * from HumanResources.EmployeePayHistory
 
@@ -454,7 +454,7 @@ from (
     group by eph.businessentityid
 ) as salaryrevisions
 join person.person p on p.businessentityid = salaryrevisions.businessentityid
-order by revisedtime desc
+order by revisedtimeÂ desc
 
 
 --33.	 check if any employee from jobcandidate table is having any payment revisions
@@ -590,7 +590,7 @@ from Sales.SalesTaxRate str
 join Person.StateProvince sp 
 on str.StateProvinceID = sp.StateProvinceID
 group by sp.Name
-order by sp.Name
+order byÂ sp.Name
 
 --44.	Find the department wise count of employees
 select* from HumanResources.Employee
